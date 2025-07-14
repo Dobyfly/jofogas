@@ -3,11 +3,14 @@
   --jofogas_orange: #f07330;
   --jofogas_peach:#FEF1EB;
   --jofogas_blue:#336699;
+  --jofogas_extra_dark:#213144;
   --gutter: 60px;
   --corner: 15px;
-  --text_dark: #666666;
+  --text_dark: #333333;
   --text_light: #fff;
+  --text_footer:#6c8fb1;
   --text_shadow: 1px 1px #00000030;
+  --small-text:12px;
 }
 
 /* base */
@@ -52,9 +55,17 @@ h3 {
     font-weight: 600;
     color:var(--jofogas_blue);
 }
+h4 {
+	font-size: 16px;
+    padding-bottom: 0px;
+    margin-bottom: calc(var(--gutter) / 8);
+    margin-top: 0px;
+    font-weight: 600;
+    color:var(--jofogas_blue);
+}
 
 
-h1.center, h2.center, h3.center {
+h1.center, h2.center, h3.center, p.center {
 text-align:center;
 }
 body {
@@ -73,8 +84,18 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
-
-
+.pad_top_extra_small {
+    padding-top:calc(var(--gutter) / 4);
+}
+.pad_top_small {
+    padding-top:calc(var(--gutter) / 2);
+}
+.pad_top_large {
+    padding-top:calc(var(--gutter) / 1);
+}
+.text_small {
+    font-size:var(--small-text);
+}
 .pic.mobile_pic {
 display:none;
 }
@@ -339,28 +360,7 @@ margin-top:2rem;
   	opacity: 1; 
   	transform: translateX(0); 
 }
-@media (max-width:1200px) {
-	.action {
-		max-width: 100%;
-		position: relative;
-		top: inherit;
-		max-height: 180px;
-		
-	}
-		.just_badge .action {
-		max-width: 100%;
-		position: relative;
-		top: inherit;
-		max-height: none;
-		
-	}
-	.sc .container {
-		background-size: auto 100%;
 
-		background-position: -290px 0px;
-	}
-
-}
 
 .textblock {
     color: #fff;
@@ -377,11 +377,7 @@ margin-top:2rem;
     display: block;
 	color:#fff;
 }
-.textblock b {
 
-
-
-}
 b.headmain {
     font-weight: 800;
     /* line-height: 130%; */
@@ -565,5 +561,144 @@ flex-direction: column;
     background-color: var(--jofogas_peach);
     margin-top:0;
     background-image:none;
-    padding:0);
+    padding:0;
+    border-radius: var(--corner);
+    
+}
+.apps {
+display: flex;
+flex-direction: column;
+justify-items: center;
+align-items: center;
+justify-content: center;
+padding:calc(var(--gutter) / 2);
+gap:calc(var(--gutter) / 4);
+text-align:center;
+}
+.apps a {
+display: inline-block;
+    -webkit-box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
+    border:solid 1px #000000;
+    border-radius:7px;
+
+}
+.apps a:hover {
+
+    box-shadow: none;
+    border:solid 1px #fff;
+
+}
+.separated.secondary .banner .phone {
+height:100%;
+max-width: none;
+padding-left:calc(var(--gutter) / 2);
+}
+@media (max-width: 765px) {
+    .apps a {
+    margin:0.3rem;
+
+    }
+    .banner .picture {
+    display:none;   
+    }
+    .separated.secondary .banner { 
+    background-image:url(images/telo.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    }
+    .apps {
+    background-color: #fef1ebcf;
+
+    }
+}
+.apps h1, .apps h2, .apps h3 {
+color:var(--text_dark);
+}
+
+
+/* footer */
+.footer {
+    font-size:var(--small-text);
+    background-color: var(--jofogas_extra_dark);
+    color:var(--text_footer);
+    padding:var(--gutter) 0;
+}
+.footer a {
+    color:var(--text_footer);
+    text-decoration:none;
+}
+.footer a:hover {
+    color:#fff;
+}
+.footer h4 {
+    color:var(--text_footer);
+}
+.footer ul {
+  list-style: none;
+  padding-left:0px;
+
+}
+.footer .vertical {
+border-top:1px solid var(--text_footer);
+margin-top:var(--gutter);
+
+}
+.footer .vertical ul li {
+padding-top:0.5rem;
+
+}
+.footersocial {
+    background-color: #ffffff;
+    display:flex;
+    justify-content: center;
+    padding:2rem 0;
+    align-items: center;
+    gap:1rem;
+
+}
+.footersocial a {
+
+    display:inline-block;
+
+
+}
+@media (max-width: 765px) {
+    .footersocial {
+    flex-direction:column;
+
+    }
+}
+
+.footerlinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerlinks ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footerlinks ul li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 8px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Elválasztó csík a linkek között, de az utolsón nincs */
+.footerlinks ul li:not(:last-child) a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background-color: var(--text_footer);
+  margin-left: 8px;
+  vertical-align: middle;
 }
