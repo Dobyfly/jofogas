@@ -47,6 +47,11 @@ h2 {
     font-weight: 800;
     color:var(--jofogas_blue);
 }
+@media (max-width: 765px) {
+    h2 {
+        margin-bottom: calc(var(--gutter) / 4);
+    }
+}
 h3 {
 	font-size: clamp(16px, 5vw, 20px);
     padding-bottom: 0px;
@@ -198,7 +203,7 @@ padding-bottom: 0;
 @media (max-width: 765px) {
 .text {
     padding-top: calc(var(--gutter) / 2);
-    padding-bottom: calc(var(--gutter) / 2);
+    padding-bottom: 0;
 }
 }
 .text.plane .container {
@@ -259,8 +264,7 @@ padding:0;
 }
 @media (max-width:570px) {
 	.sc {
-	background-size: 370%;
-        background-position: -850px 0px;
+
 		padding: 2rem;
 
 	
@@ -269,8 +273,7 @@ padding:0;
 }
 @media (max-width:450px) {
 	.sc {
-        background-size: auto 100%;
-        background-position: -1000px 0px;
+ 
         padding: 1.5rem;
 
 	
