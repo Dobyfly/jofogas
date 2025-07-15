@@ -642,11 +642,7 @@ color:var(--text_dark);
   padding-left:0px;
 
 }
-.footer .vertical {
-border-top:1px solid var(--text_footer);
-margin-top:var(--gutter);
 
-}
 .footer .vertical ul li {
 padding-top:0.5rem;
 
