@@ -164,7 +164,8 @@ display:block;
 .custombutton:hover {
 	 box-shadow:none;
      color:#fff;
-     opacity: 0.9;
+     background:#ffa45e;
+     text-decoration:none;
 }
 
 .navbar-expand-lg {
