@@ -16,6 +16,9 @@
 }
 
 /* base */
+html {
+  scroll-behavior: smooth;
+}
 img {
 max-width:100%;
 }
@@ -118,21 +121,23 @@ display:none;
 .pic.mobile_pic {
 display:block;
 }
-
+.mobil_padding_top {
+   margin-top:20px; 
+}
 }
 .custombutton {
 
-    font-weight: 600 !important;
+font-weight: 600 !important;
     background: var(--jofogas_orange);
     color: #fff;
-    padding: 5px 25px;
+    padding: 14px 25px;
     border-radius: 5px;
     -webkit-box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
     box-shadow: 4px 4px 12px -6px rgba(0, 0, 0, 0.15);
     width: auto;
     display: inline-block;
-    line-height: 40px;
+    line-height: 20px;
     text-align: center;
     font-size: clamp(12px, 1.2vw, 14px);
     position: relative;
@@ -140,8 +145,12 @@ display:block;
     display: inline-block;
     width: auto;
     max-width: 100%;
-    white-space: nowrap;
-	text-decoration:none;
+    text-decoration: none;
+    
+}
+.custombutton.noflex {
+
+margin:10px 0px;
 }
 .custombutton.outline {
     background: transparent;
@@ -240,7 +249,7 @@ padding:0;
 
 .icon-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: .5rem;
   margin: .4rem 0;
 }
@@ -257,7 +266,10 @@ padding:0;
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.icon-list li span {
+  flex: 1;
+  display: inline;
+}
 /* /base */
 /* hero */
 .sc_block {
@@ -356,7 +368,8 @@ display:none;
 .sc p {
    
     font-weight: 500;
-    font-size:  clamp(1.2rem, 2vw, 1.5rem);
+    font-size:  clamp(1.2rem, 2vw, 1.3rem);
+        max-width: 530px;
 }
 .sc h1 span {
 
@@ -384,8 +397,8 @@ color:var(--jofogas_orange);
 @media (min-width:992px) {
     .sc .container {
         height: 100%;
-        padding-top: var(--gutter);
-		padding-bottom: var(--gutter);
+        padding-top: calc(var(--gutter) / 2);
+		padding-bottom: calc(var(--gutter) / 2);
         align-content: center;
 		min-height:374px;
     }
